@@ -14,11 +14,11 @@ def task_list(request):
 
 def task_delete(request, task_id):
     task = get_object_or_404(Task, id=task_id)  # Fetch the task and handle 404 if not found
-    task.delete()  # Delete the task
-    return redirect('task_list')  # Redirect to task list after deletion
+    task.delete() 
+    return redirect('task_list')  
 
 def task_update(request, task_id):
-    task = get_object_or_404(Task, id=task_id)  # Fetch the task and handle 404 if not found
-    task.completed = not task.completed  # Toggle the completed status
+    task = get_object_or_404(Task, id=task_id)  
+    task.completed = not task.completed 
     task.save()  # Save the updated task
     return redirect('task_list')  # Redirect to task list after updating
