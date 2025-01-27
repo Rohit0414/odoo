@@ -103,4 +103,22 @@ li:hover {
 .actions a.delete:hover {
     color: #e53935;
 }
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.overdue {
+    background-color: #fdd;
+    border: 1px solid #f00;
+}
+
+.due-today {
+    background-color: #fffdcc;
+}
+
+.due-today p {
+    font-weight: bold;
+    color: #d88;
+}
 
