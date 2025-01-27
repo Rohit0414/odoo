@@ -16,13 +16,18 @@
     <ul>
         {% for task in tasks %}
             <li class="{% if task.completed %}completed{% endif %}">
-                {{ task.title }}
-                <div class="actions">
-                    <a href="{% url 'task_update' task.id %}">✔</a>
-                    <a href="{% url 'task_delete' task.id %}" class="delete">❌</a>
-                </div>
+                <strong>{{ task.title }}</strong>
+                {% if task.description %}
+                    <p>{{ task.description }}</p>
+                {% endif %}
+                {% if task.due_date %}
+                    <p>Due: {{ task.due_date }}</p>
+                {% endif %}
+                <a href="{% url 'task_update' task.id %}">✔</a>
+                <a href="{% url 'task_delete' task.id %}">❌</a>
             </li>
         {% endfor %}
     </ul>
+    
 </body>
 </html>
