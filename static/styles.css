@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3faf7 !important;
+    background-color: #06462a !important;
     color: #333;
     max-width: 600px;
     margin: 50px auto;
@@ -88,7 +88,7 @@ li:hover {
 
 .actions a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #4CAF50;
     transition: color 0.3s ease;
 }
@@ -98,7 +98,7 @@ li:hover {
 }
 
 .actions a.delete {
-    color: #f44336;
+    color: #e21c0e;
 }
 
 .actions a.delete:hover {
